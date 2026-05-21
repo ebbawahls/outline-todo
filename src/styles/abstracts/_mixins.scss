@@ -1,0 +1,28 @@
+@use './variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button-base {
+  border: $border;
+  background: $white;
+  color: $black;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}
+
+@mixin input-base {
+  border: $border;
+  padding: 10px;
+  background: $white;
+  color: $black;
+}

@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.singleListPage {
+  padding: 40px;
+  min-height: 100vh;
+
+  img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    margin-bottom: 32px;
+    filter: grayscale(100%);
+    border: $border;
+  }
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 64px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+  }
+
+  button {
+    @include button-base;
+  }
+
+  input {
+    @include input-base;
+    width: 300px;
+  }
+}
+
+.todoForm {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+
+  input {
+    flex: 1;
+    @include input-base;
+  }
+
+  button {
+    @include button-base;
+  }
+}
+
+.todosContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
